@@ -166,14 +166,14 @@
       .find(btn => btn.textContent.includes("Simpan"));
     simpanKategori?.click();
     console.log("✅ Klik tombol Simpan kategori");
-    await delay();
+    await delay(1000);
 
     // === STEP 18: Klik tombol Order ===
     const orderBtn = [...document.querySelectorAll('button.van-button')]
       .find(btn => btn.textContent.includes("Order"));
     orderBtn?.click();
     console.log("✅ Klik tombol 'Order'");
-    await delay(2000);
+    await delay(1000);
 
     // === STEP 19: Klik Order Sekarang ===
     const orderSekarang = [...document.querySelectorAll('button.van-button')]
