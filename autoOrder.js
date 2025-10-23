@@ -181,6 +181,12 @@
     orderSekarang?.click();
     console.log("✅ Klik tombol 'Order sekarang'");
 
+
+      // Optional: bersihkan cache/cookies localStorage & sessionStorage
+  console.log("🧹 Membersihkan cache lokal...");
+  localStorage.clear();
+  sessionStorage.clear();
+
     console.log("🎉 Semua langkah selesai tanpa error!");
 
   } catch (err) {
