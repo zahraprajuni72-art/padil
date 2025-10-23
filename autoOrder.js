@@ -173,7 +173,7 @@
       .find(btn => btn.textContent.includes("Order"));
     orderBtn?.click();
     console.log("✅ Klik tombol 'Order'");
-    await delay(1500);
+    await delay(2000);
 
     // === STEP 19: Klik Order Sekarang ===
     const orderSekarang = [...document.querySelectorAll('button.van-button')]
