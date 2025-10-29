@@ -68,83 +68,83 @@
     // === STEP 3: Isi nama pengirim ===
     const namaPengirim = await waitForEl('textarea[name="name"]');
     triggerInput(namaPengirim, namaPengirimVal);
-    await delay(200);
+    await delay();
 
     // === STEP 4: Isi no HP pengirim ===
     const hpPengirim = await waitForEl('input[name="phone"]');
     triggerInput(hpPengirim, telpPengirimVal);
-    await delay(200);
+    await delay();
 
     // === STEP 5: Klik dan pilih provinsi pengirim ===
     const provField = await waitForEl('input[placeholder="Provinsi, Kota, Kecamatan"]');
     provField.click();
     console.log("✅ Klik field alamat pengirim");
-    await delay(200);
+    await delay();
 
     const provSearch = await waitForEl('input[placeholder="Cari provinsi,kota,kecamatan"]');
     triggerInput(provSearch, "Sumatera Barat,Padang,Lubuk Begalung");
-    await delay(200);
+    await delay();
 
     const hasilPengirim = [...document.querySelectorAll('span.van-highlight__tag')]
       .find(e => e.textContent.includes("Sumatera Barat,Padang,Lubuk Begalung"));
     hasilPengirim?.click();
     console.log("✅ Klik hasil pencarian pengirim");
-    await delay(200);
+    await delay();
 
     // === STEP 6: Isi alamat pengirim ===
     const alamatPengirim = await waitForEl('textarea[name="address"]');
     triggerInput(alamatPengirim, alamatPengirimVal);
-    await delay(200);
+    await delay();
 
     // === STEP 7: Klik tombol simpan pengirim ===
     const simpanPengirim = await waitForEl('button.van-button--primary');
     simpanPengirim.click();
     console.log("✅ Klik tombol Simpan pengirim");
-    await delay(200);
+    await delay();
 
     // === STEP 8: Klik bagian penerima ===
     const penerimaDiv = await waitForEl('div.address-content.placeholder');
     penerimaDiv.click();
     console.log("✅ Klik bagian penerima");
-    await delay(200);
+    await delay();
 
     // === STEP 9: Isi nama penerima ===
     const namaPenerima = await waitForEl('textarea[name="name"]');
     triggerInput(namaPenerima, penerima.nama);
-    await delay(200);
+    await delay();
 
     // === STEP 10: Isi no HP penerima ===
     const hpPenerima = await waitForEl('input[name="phone"]');
     triggerInput(hpPenerima, penerima.telepon);
-    await delay(200);
+    await delay();
 
     // === STEP 11: Klik icon provinsi penerima ===
     const iconProvPenerima = await waitForEl('i.van-icon-arrow');
     iconProvPenerima.click();
     console.log("✅ Klik icon field Provinsi penerima");
-    await delay(200);
+    await delay();
 
     // === STEP 12: Isi pencarian provinsi penerima ===
     const provSearchPenerima = await waitForEl('input[placeholder="Cari provinsi,kota,kecamatan"]');
     triggerInput(provSearchPenerima, "Sumatera Barat,Padang,Padang Utara");
-    await delay(200);
+    await delay();
 
     const hasilPenerima = [...document.querySelectorAll('span.van-highlight__tag')]
       .find(e => e.textContent.includes("Sumatera Barat,Padang,Padang Utara"));
     hasilPenerima?.click();
     console.log("✅ Klik hasil pencarian penerima");
-    await delay(200);
+    await delay();
 
     // === STEP 13: Isi alamat penerima ===
     const alamatPenerima = await waitForEl('textarea[name="address"]');
     triggerInput(alamatPenerima, penerima.alamat);
-    await delay(200);
+    await delay();
 
     // === STEP 14: Klik tombol simpan penerima ===
     const simpanPenerima = await waitForEl('button.van-button--primary');
     simpanPenerima.click();
     console.log("✅ Klik tombol Simpan penerima");
-    await delay(200);
+    await delay();
 
     // === STEP 15: Klik elemen wajib (kategori) ===
     const wajib = document.querySelector('span.red, .required, .van-field__error-message');
