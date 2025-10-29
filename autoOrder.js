@@ -54,11 +54,17 @@
     console.log("✅ Data Pengirim:", namaPengirimVal, telpPengirimVal, alamatPengirimVal);
     console.log("✅ Data Penerima:", penerima.nama, penerima.telepon, penerima.alamat);
 
-    // === STEP 2: Klik bagian pengirim ===
+    /*// === STEP 2: Klik bagian pengirim ===
     document.querySelector('span[data-v-67c91dd2].mr8.left')?.click();
     console.log("✅ Klik span awal");
-    await delay(800);
+    await delay(800); */
 
+    // === STEP 2: Klik bagian pengirim (pakai div placeholder baru) ===
+    const pengirimDiv = await waitForEl('div.address-content.placeholder');
+    pengirimDiv.click();
+    console.log("✅ Klik bagian 'Masukkan informasi pengirim'");
+    await delay();
+   
     // === STEP 3: Isi nama pengirim ===
     const namaPengirim = await waitForEl('textarea[name="name"]');
     triggerInput(namaPengirim, namaPengirimVal);
